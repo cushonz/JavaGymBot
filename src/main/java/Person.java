@@ -14,7 +14,7 @@ public class Person {
     public Person(int height, int weight, int goal, String name){
         this.name = name;
         // Determine if the user wants to gain or lose weight
-        if (weight > goal)
+        if (weight < goal)
             this.gain = true;
         else
             this.gain = false;

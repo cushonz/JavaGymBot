@@ -42,6 +42,21 @@ public class bot {
 
                 }else if (userInput[0].equals("!logfat")){
 
+                } else if (userInput[0].equals("!makeprofile")){
+
+                    // Extract desired information from the user input array
+                    try {
+                        int age = Integer.parseInt(userInput[1]);
+                        int height = Integer.parseInt(userInput[2]);
+                        int weight = Integer.parseInt(userInput[3]);
+                        int targetWeight = Integer.parseInt(userInput[4]);
+                        Person newUser = new Person(age,height,weight,targetWeight, event.getMessageAuthor().getDisplayName());
+                        System.out.println(newUser.name);
+                    } catch (NumberFormatException n){
+                        event.getChannel().sendMessage("Make sure to adhere to the following format: \n \n" +
+                                "!makeProfile `<age>, <height in cm>, <weight>, <target weight>`");
+                    }
+
                 }
 
 
