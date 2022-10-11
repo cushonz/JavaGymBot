@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.io.*;
 
-public class Person {
+public class Person implements java.io.Serializable {
     int height; // cm
     int weight; // LBS
     int userID;
@@ -21,7 +22,6 @@ public class Person {
 
         this.height = height;
         this.weight = weight;
-//        this.weightHistory.
         this.goal = goal;
     }
 }

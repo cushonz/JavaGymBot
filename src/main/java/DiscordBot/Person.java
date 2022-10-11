@@ -2,7 +2,7 @@ package DiscordBot;
 
 import java.util.ArrayList;
 
-    public class Person {
+    public class Person implements java.io.Serializable{
         int height; // cm
         int weight; // LBS
         int userID;
